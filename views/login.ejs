@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #E60023; /* Pinterest red color */
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input[type="text"], 
+        .container input[type="password"] {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+           
+        }
+
+       
+
+        .container input[type="submit"] {
+            padding: 12px;
+            background-color: #E60023;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #c7001c;
+        }
+
+        .container .social-login {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .container .social-login button {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .container .social-login button:last-child {
+            background-color: #DB4437; /* Google color */
+        }
+
+        .container .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .container .forgot-password a {
+            color: #E60023;
+            text-decoration: none;
+        }
+
+        .container .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container .signup-link a {
+            color: #E60023;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .error{
+            color: red;
+            margin: 2px 5px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pinterest</h2>
+
+        <% if(error.length > 0){ %>
+              <p class="error"> <%= error %> </p>
+            
+        <% } %>
+        <form action="/login" method="post">
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="password">
+            <input type="submit" value="Log in">
+        </form>
+
+        <div class="forgot-password">
+            <p><a href="#">Forgot your password?</a></p>
+        </div>
+
+        <div class="social-login">
+            <button>Login with Facebook</button>
+            <button>Login with Google</button>
+        </div>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="/">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>

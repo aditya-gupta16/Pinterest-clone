@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins","sans-serif";
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #f4f4f4;
+  height: 100vh;
+
+}
+.header{
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+ 
+
+}
+.profile-card {
+  margin-top: 1vw;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  height: 50vh;
+  width: 75vw;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15rem;
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  background-color: #4070f4;
+}
+.profile-card .image {
+  border-radius: 50%;
+  background-color: #4070f4;
+  height: 15rem;
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+  width: 15rem;
+  position: relative;
+  z-index: 3;
+}
+.image img {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.1rem;
+  height: 100%;
+  width: 100%;
+}
+.profile-card .text-data {
+  text-align: center;
+}
+.text-data h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+.text-data p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.media-icons{
+  margin-top: 1.5rem;
+}
+.media-icons a {
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  padding-inline: 1rem;
+  position: relative;
+  margin-inline: 0.8rem;
+}
+.media-icons i {
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform: translate(-50%, -50%);
+}
+.buttons{
+  margin-top: 2.5rem;
+}
+.buttons button {
+  background-color: #4070f4;
+  border-radius: 2.4rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0.8rem 2.4rem;
+  margin-inline: 1.2rem;
+}
+.buttons button:hover {
+  background-color: #152551;
+}
+.profile-card .analytics {
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.analytics .data {
+  color: #333;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.data i {
+  font-size: 1.8rem;
+  margin-right: 0.3rem;
+}
+.data p {
+  font-size: 2rem;
+}
+
+a button{
+    padding: 5px 25px;
+    border-radius: 10px;
+    background-color: rgb(198, 17, 17);
+    color: white;
+    border: none;
+    margin-top: 5px;
+
+}
+
+a button:hover{
+    
+    background-color: rgb(150, 25, 25);
+
+}
+
+.cards{
+  height: 320px;
+  border-radius: 10px;
+  width: 300px;
+  background: linear-gradient(lightblue, lightcyan);
+  margin-top: 2.5vh;
+  margin-left: 13vw;
+
+
+}
+
+.card img{
+  height: 100%;
+  width: 100%;
+}
+
+
+.section-2{
+  height: 10vh;
+  width: 100vw;
+  background-color: yellow;
+}
+
+h3{
+  font-size: 19px;
+}
+
+form{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.text-data{
+  padding: 0.5vw 1vw;
+}
+
+input{
+  padding: 5px 25px;
+  border-radius: 10px;
+
+}
+/* media queries  */
+@media (width <= 390px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  input{
+  padding: 2px 15px;
+  border-radius: 10px;
+  
+}
+
+form{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  line-height: 0;
+  margin-top: 5px;
+  margin-left: 12vw;
+  text-align: center;
+}
+
+.profile-card {
+  margin-top: 1vw;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  height: 60vh;
+  width: 75vw;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+}
+@media (width <= 370px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+    </style>
+    <body>
+        <section class="header">
+          <section class="profile-card">
+            <div class="image">
+                <img src="https://preview.keenthemes.com/metronic-v4/theme_rtl/assets/pages/media/profile/profile_user.jpg" alt="user image">
+            </div>
+            <div class="text-data">
+                <h2 class="user"> <%= user.username %> </h2>
+                <h2 class="username"> @<%= user.fullname %></h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <a href="/logout"><button>Log Out</button></a> 
+            </div>
+             <form action="upload" method="post" enctype="multipart/form-data">
+              <input type="text" placeholder="Upload Caption">
+              <input type="file" name="file">
+              <input type="submit">
+             </form>
+        </section> 
+        </section>
+
+        <div class="cards">
+          <% user.posts.forEach(function(post){ %>
+            <div class="card">
+              <img src="/images/uploads/<%= post.image %>" alt="">
+            </div>
+          <%  }) %>
+        </div>
+
+
+    </body>
+    
+</body>
+</html>
