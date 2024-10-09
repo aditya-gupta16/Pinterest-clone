@@ -8,6 +8,7 @@ const localStrategy = require('passport-local').Strategy;
 passport.use(new localStrategy(userModel.authenticate()));
 const upload = require('./multer');
 const post = require('./post');
+const PORT = process.env.port || 3000;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
