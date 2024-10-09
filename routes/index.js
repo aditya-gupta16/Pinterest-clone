@@ -9,6 +9,9 @@ passport.use(new localStrategy(userModel.authenticate()));
 const upload = require('./multer');
 const post = require('./post');
 const PORT = process.env.port || 3000;
+const dbHost = process.env.DB_HOST;
+const dbUser = process.env.DB_USER;
+const dbPass = process.env.DB_PASS;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
